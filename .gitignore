@@ -1,0 +1,11 @@
+*.bw
+*.bigwig
+*.BigWig
+*.bigWig
+*.fastq
+*.bam
+*.bai
+*.sai
+*.sam
+/try1/genome/
+*matrix*
