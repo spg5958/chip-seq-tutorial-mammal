@@ -1,0 +1,16 @@
+prim_db	prim_id	prim_alt	prim_cons	sec_db	sec_id	sec_alt	sec_cons	trim_left	trim_right	red_db	red_id	red_alt	E-value	gap	orient	count	total	adj_p-value	p-value
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	meme.xml	CASCTGCY	MEME-2	CASCTGCY	0	0	.	.	.	3.82e-01	10	8	15	571	1.96e-06	1.77e-05
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	meme.xml	RVRGCAGSTGB	MEME-1	RVRGCAGSTGB	2	1	meme.xml	CASCTGCY	MEME-2	7.86e-01	10	8	15	609	4.09e-06	3.68e-05
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	meme.xml	RVRGCAGSTGB	MEME-1	RVRGCAGSTGB	2	1	meme.xml	CASCTGCY	MEME-2	7.86e-01	24	8	15	609	4.09e-06	3.68e-05
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	meme.xml	CCCCTCCCCCA	MEME-3	CCCCTCCCCCA	0	0	.	.	.	1.37e+00	105	2	3	43	9.28e-03	8.05e-02
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	streme.xml	11-RGCAGGTGAWGGV	STREME-11	RGCAGGTGAWGGV	0	1	.	.	.	1.62e+00	22	1	4	123	1.11e-02	9.53e-02
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	streme.xml	5-GAGTCAC	STREME-5	GAGTCAC	0	0	.	.	.	1.74e+00	126	4	4	65	1.19e-02	1.02e-01
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	streme.xml	6-GCAGCTGCA	STREME-6	GCAGCTGCA	0	0	.	.	.	3.33e+00	43	4	6	226	2.39e-02	1.96e-01
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	streme.xml	10-TAATGAAAK	STREME-10	TAATGAAAK	0	0	.	.	.	5.73e+00	45	4	4	91	4.47e-02	3.37e-01
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	streme.xml	13-CTCASCTGYCYCT	STREME-13	CTCASCTGYCYCT	0	0	.	.	.	6.18e+00	9	3	3	75	4.90e-02	3.64e-01
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	streme.xml	7-CCATCTGKC	STREME-7	CCATCTGKC	0	0	.	.	.	7.07e+00	98	6	3	41	5.80e-02	4.16e-01
+streme.xml	4-AACAAWGGVM	STREME-4	AACAAWGGVM	streme.xml	9-GGGGGAGGGGVR	STREME-9	GGGGGAGGGGVR	0	1	.	.	.	9.07e+00	82	7	4	106	8.12e-02	5.33e-01
+
+# SpaMo (Spaced Motif Analysis Tool): Version 5.5.1 compiled on Feb  5 2023 at 06:25:23
+# The format of this file is described at http://localhost:8080/meme_5.5.1/doc/spamo-output-format.html.
+# spamo -verbosity 1 -oc memechip_out/spamo_out_3 -bgfile memechip_out/background -keepprimary -primary 4-AACAAWGGVM memechip_out/Ascl1_pooled_peaks.fa memechip_out/streme_out/streme.xml memechip_out/meme_out/meme.xml memechip_out/streme_out/streme.xml

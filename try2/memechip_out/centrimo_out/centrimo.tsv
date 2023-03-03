@@ -1,0 +1,12 @@
+db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin_location	bin_width	total_width	sites_in_bin	total_sites	p_success	p-value	mult_tests
+   2	7-CCATCTGKC	STREME-7	CCATCTGKC	2.3e0	   1.3e-1	          -2.00	         0.0	     30.0	         44	          13	         13	  0.68182	6.9e-3	        21
+   1	CASCTGCY	MEME-2	CASCTGCY	4.4e0	   2.6e-1	          -1.35	         0.0	     37.0	         45	          40	         42	  0.82222	1.4e-2	        22
+   2	5-GAGTCAC	STREME-5	GAGTCAC	6.2e0	   3.7e-1	          -1.01	         0.0	      8.0	         46	           4	          7	  0.17391	2.0e-2	        22
+   2	2-GCAGVTGKG	STREME-2	GCAGVTGKG	7.4e0	   4.3e-1	          -0.84	         0.0	     34.0	         44	          30	         32	  0.77273	2.7e-2	        21
+   2	6-GCAGCTGCA	STREME-6	GCAGCTGCA	7.4e0	   4.4e-1	          -0.83	         0.0	     26.0	         44	          26	         34	  0.59091	2.7e-2	        21
+   2	11-RGCAGGTGAWGGV	STREME-11	RGCAGGTGAWGGV	9.7e0	   5.7e-1	          -0.56	         0.0	     24.0	         40	          11	         12	  0.60000	4.3e-2	        19
+   1	RVRGCAGSTGB	MEME-1	RVRGCAGSTGB	9.9e0	   5.8e-1	          -0.54	         0.0	     26.0	         42	          33	         43	  0.61905	4.3e-2	        20
+
+# CentriMo (Local Motif Enrichment Analysis): Version 5.5.1 compiled on Feb  5 2023 at 06:22:19
+# The format of this file is described at http://localhost:8080/meme_5.5.1/doc/centrimo-output-format.html.
+# centrimo -seqlen 52 -verbosity 1 -oc memechip_out/centrimo_out -bfile memechip_out/background memechip_out/Ascl1_pooled_peaks.fa memechip_out/meme_out/meme.xml memechip_out/streme_out/streme.xml

@@ -1,0 +1,70 @@
+Invoking:
+  getsize memechip_out/Ascl1_pooled_peaks_peaks1.fa 1> $metrics
+Finished invoke:
+  name: count_seqs  status: 0  time: 0.023711
+Invoking:
+  fasta-most -min 50 < memechip_out/Ascl1_pooled_peaks_peaks1.fa 1> $metrics
+Finished invoke:
+  name: most_seqs  status: 0  time: 0.038052
+Invoking:
+  fasta-center -dna -len 100 < memechip_out/Ascl1_pooled_peaks_peaks1.fa 1> memechip_out/seqs-centered
+Finished invoke:
+  name: center_seqs  status: 0  time: 0.048901
+Invoking:
+  fasta-get-markov -nostatus -nosummary -dna -m 2 memechip_out/Ascl1_pooled_peaks_peaks1.fa memechip_out/background
+Finished invoke:
+  name: bg  status: 0  time: 0.025096
+Invoking:
+  meme memechip_out/seqs-centered -oc memechip_out/meme_out -mod zoops -nmotifs 3 -minw 6 -maxw 15 -bfile memechip_out/background -dna -revcomp -nostatus
+Finished invoke:
+  name: meme  status: 0  time: 426.692011
+Invoking:
+  streme --verbosity 1 --oc memechip_out/streme_out -dna --p memechip_out/seqs-centered --minw 6 --maxw 15 --order 2
+Finished invoke:
+  name: streme  status: 0  time: 134.64246
+Invoking:
+  centrimo -seqlen 227 -verbosity 1 -oc memechip_out/centrimo_out -bfile memechip_out/background memechip_out/Ascl1_pooled_peaks_peaks1.fa memechip_out/meme_out/meme.xml memechip_out/streme_out/streme.xml
+Finished invoke:
+  name: centrimo  status: 0  time: 0.052867
+Invoking:
+  tomtom -verbosity 1 -text -thresh 0.1 memechip_out/combined.meme memechip_out/combined.meme 1> memechip_out/motif_alignment.txt
+Finished invoke:
+  name: align  status: 0  time: 0.047076
+Invoking:
+  spamo -verbosity 1 -oc memechip_out/spamo_out_1 -bgfile memechip_out/background -keepprimary -primary RVRGCAGSTGB memechip_out/Ascl1_pooled_peaks_peaks1.fa memechip_out/meme_out/meme.xml memechip_out/meme_out/meme.xml memechip_out/streme_out/streme.xml
+Finished invoke:
+  name: spamo1  status: 0  time: 4.806837
+Invoking:
+  spamo -verbosity 1 -oc memechip_out/spamo_out_2 -bgfile memechip_out/background -keepprimary -primary CCCCTCCCCCHYCCC memechip_out/Ascl1_pooled_peaks_peaks1.fa memechip_out/meme_out/meme.xml memechip_out/meme_out/meme.xml memechip_out/streme_out/streme.xml
+Finished invoke:
+  name: spamo2  status: 0  time: 1.520278
+Invoking:
+  spamo -verbosity 1 -oc memechip_out/spamo_out_3 -bgfile memechip_out/background -keepprimary -primary 2-AACAAWRG memechip_out/Ascl1_pooled_peaks_peaks1.fa memechip_out/streme_out/streme.xml memechip_out/meme_out/meme.xml memechip_out/streme_out/streme.xml
+Finished invoke:
+  name: spamo3  status: 0  time: 1.855053
+Invoking:
+  spamo -verbosity 1 -oc memechip_out/spamo_out_4 -bgfile memechip_out/background -keepprimary -primary 4-ATGCAAATGA memechip_out/Ascl1_pooled_peaks_peaks1.fa memechip_out/streme_out/streme.xml memechip_out/meme_out/meme.xml memechip_out/streme_out/streme.xml
+Finished invoke:
+  name: spamo4  status: 0  time: 1.062008
+Invoking:
+  fimo --parse-genomic-coord --verbosity 1 --oc memechip_out/fimo_out_1 --bgfile memechip_out/background --motif RVRGCAGSTGB memechip_out/meme_out/meme.xml memechip_out/Ascl1_pooled_peaks_peaks1.fa
+Finished invoke:
+  name: fimo1  status: 0  time: 0.644218
+Invoking:
+  fimo --parse-genomic-coord --verbosity 1 --oc memechip_out/fimo_out_2 --bgfile memechip_out/background --motif CCCCTCCCCCHYCCC memechip_out/meme_out/meme.xml memechip_out/Ascl1_pooled_peaks_peaks1.fa
+Finished invoke:
+  name: fimo2  status: 0  time: 0.63891
+Invoking:
+  fimo --parse-genomic-coord --verbosity 1 --oc memechip_out/fimo_out_3 --bgfile memechip_out/background --motif 2-AACAAWRG memechip_out/streme_out/streme.xml memechip_out/Ascl1_pooled_peaks_peaks1.fa
+Finished invoke:
+  name: fimo3  status: 0  time: 0.563292
+Invoking:
+  fimo --parse-genomic-coord --verbosity 1 --oc memechip_out/fimo_out_4 --bgfile memechip_out/background --motif 4-ATGCAAATGA memechip_out/streme_out/streme.xml memechip_out/Ascl1_pooled_peaks_peaks1.fa
+Finished invoke:
+  name: fimo4  status: 0  time: 0.581802
+Writing output
+Invoking:
+  meme-chip_html_to_tsv memechip_out/meme-chip.html memechip_out/summary.tsv "meme-chip Ascl1_pooled_peaks_peaks1.fa" 5.5.1 "Sun Jan 29 10\:33\:12 2023 -0800"
+Finished invoke:
+  name: summary  status: 0  time: 0.045517
+Done
